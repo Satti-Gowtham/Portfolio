@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colours variables */
+    --color-background: #000000;
+    --color-card: #0A0A0A;
+    --color-text-shade: #676767;
+    --color-black: #0A0A0A;
+    --color-white: #FFFFFF;
+
+    /* Fonts variables  */
+    font-size: 16px;
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: var(--font);
+    background-color: var(--color-background);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-text-shade);
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-shade);
+}
+
+.card {
+    width: 100%;
+    max-width: 25rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    background-color: var(--color-card);
+    padding: 0 0 4rem 0;
+    box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.1);
+    animation: fadein 1s ease-in;
+}
+
+.card__avatar {
+    background-image: url("./assets/profile_image.jpeg");
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    box-shadow: inset 0px 5px 5px rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem 1.25rem 0 0;
+    position: relative;
+}
+
+.card__avatar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0) 68.46%, var(--color-card) 96.41%);
+}
+
+.info__location {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-button {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: inset 0px 5px 5px rgba(10, 10, 10, 0.1);
+    transition: .3s ease-in-out;
+}
+
+.contact-button:hover {
+    opacity: .7;
+}
+
+.card__info {
+    margin: 0 0 16px;
+}
+
+.card__social {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    margin: 0 0 1rem;
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .contact-button {
+        font-size: .9rem;
+        padding: .75rem 1.25rem;
+    }
+}
+
